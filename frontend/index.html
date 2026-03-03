@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск курса</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-labelledby="course-search-title">
+        <h1 id="course-search-title" class="card__title">Поиск курса</h1>
+        <p class="card__subtitle">
+          Введите PIN-код и пароль от курса, чтобы продолжить.
+        </p>
+
+        <form id="course-search-form" class="form" novalidate>
+          <div class="form__field">
+            <label class="form__label" for="pin">PIN-код курса</label>
+            <div class="input-wrapper">
+              <span class="input-wrapper__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    d="M9 3L7 21M17 3l-2 18M5 9h16M3 15h16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <input
+                id="pin"
+                name="pin"
+                type="text"
+                inputmode="numeric"
+                placeholder="Например, 123456"
+                required
+                minlength="4"
+                maxlength="12"
+                class="input"
+              />
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="password">Пароль курса</label>
+            <div class="input-wrapper">
+              <span class="input-wrapper__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon">
+                  <rect
+                    x="5"
+                    y="10"
+                    width="14"
+                    height="10"
+                    rx="2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                  <path
+                    d="M9 10V7a3 3 0 0 1 6 0v3"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Пароль от курса"
+                required
+                minlength="4"
+                class="input"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="button">Найти курс</button>
+
+          <p id="form-message" class="form__message" role="alert" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
+
+

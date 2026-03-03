@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/dspcKk06/LOGO-2.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeQuest — соревнования для программистов</title>
+    <link rel="stylesheet" href="./styles/main.css"/>
+    <link rel="stylesheet" href="./styles/home.css"/>
+  </head>
+  <body>
+    <main class="page page--dashboard">
+      <div class="dashboard">
+        <header class="dashboard-header">
+          <div class="dashboard-logo">CodeQuest</div>
+          <div class="dashboard-search">
+            <span class="input-wrapper__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="icon">
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+                <line
+                  x1="15.5"
+                  y1="15.5"
+                  x2="20"
+                  y2="20"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <input type="text" placeholder="Поиск турниров и задач" />
+          </div>
+          <div class="dashboard-user">
+            <div class="dashboard-avatar"></div>
+            <span>Никита</span>
+          </div>
+        </header>
+
+        <section class="dashboard-main">
+          <aside class="home-sidebar" aria-label="Профиль">
+            <article class="home-card">
+              <div class="home-badge">Профиль участника</div>
+              <h2 class="home-card__title">Никита</h2>
+              <p class="home-card__time">Разработчик · Russia</p>
+              <div class="home-stats">
+                <div>
+                  <span class="home-stat__number">3</span>
+                  активных турнира
+                </div>
+                <div>
+                  <span class="home-stat__number">24</span>
+                  решённых задач
+                </div>
+              </div>
+              <a href="./index.html" class="button">Войти по PIN-коду курса</a>
+            </article>
+          </aside>
+
+          <!-- Было: class="home-hero", id="home-hero" -->
+          <section aria-label="Лента" class="home-hero" id="home-hero">
+
+            <div class="home-card">
+              <h2 class="home-card__title">Что нового?</h2>
+              <p class="home-card__time">
+                Здесь будет лента обновлений турниров и задач с бэкенда.
+              </p>
+            </div>
+
+            <article class="home-card">
+              <h2 class="home-card__title">Алгоритмический спринт</h2>
+              <p class="home-card__time">
+                Новый раунд стартует сегодня в 19:00. Подготовься к задачам на графы и
+                динамическое программирование.
+              </p>
+            </article>
+          </section>
+
+          <aside class="home-sidebar" id="home-sidebar" aria-label="Ближайшие турниры">
+            <article class="home-card">
+              <h2 class="home-card__title">Алгоритмы · Вечерний раунд</h2>
+              <div class="home-card__meta">
+                <span class="home-tag">Сегодня</span>
+                <span>19:00 (MSK)</span>
+              </div>
+            </article>
+
+            <article class="home-card">
+              <h2 class="home-card__title">Backend Battle</h2>
+              <div class="home-card__meta">
+                <span class="home-tag">Командный</span>
+                <span>Go · Node.js · Java</span>
+              </div>
+              <p class="home-card__time">Регистрация до 15 марта</p>
+            </article>
+
+            <article class="home-card">
+              <h2 class="home-card__title">CodeQuest Junior</h2>
+              <div class="home-card__meta">
+                <span class="home-tag">Новички</span>
+                <span>Python · JavaScript</span>
+              </div>
+              <p class="home-card__time">Подходит для первых соревнований</p>
+            </article>
+          </aside>
+        </section>
+      </div>
+      <button onclick="getContests()">Тык</button>
+      <script src="./scripts/home.js"></script>
+    </main>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        getContests();
+    });
+  </script>
+</html>
+
+
